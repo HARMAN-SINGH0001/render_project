@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Placement Predictor</title>
+</head>
+<body>
+
+<h1>Student Placement Predictor</h1>
+
+<form method="post" action="/predict">
+
+    <label>CGPA</label><br>
+    <input type="text" name="cgpa" required><br><br>
+
+    <label>IQ</label><br>
+    <input type="text" name="iq" required><br><br>
+
+    <label>Profile Score</label><br>
+    <input type="text" name="profile_score" required><br><br>
+
+    <input type="submit" value="Predict">
+
+</form>
+
+<br><br>
+
+{% if result %}
+<h2 style="color:green;">Prediction: {{ result }}</h2>
+{% endif %}
+
+</body>
+</html>
